@@ -8,6 +8,7 @@
         
         <script>
             function scan() {
+                document.getElementById('output').innerHTML='Starting scan';
                 navigator.bluetooth.requestDevice().then(function(d){document.getElementById('output').innerHTML='Found device'}, function(e){document.getElementById('output').innerHTML='oh, no...'});
             }
         </script>
