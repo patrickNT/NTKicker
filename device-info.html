@@ -36,8 +36,11 @@ Await)</a> sample.</p>
     document.write("After Method Call");
 
     if (isWebBluetoothEnabled()) {
+      document.write('Bluetooth enabled');
       ChromeSamples.clearLog();
       onButtonClick();
+    } else {
+      document.write('Bluetooth not enabled');
     }
   });
 </script>
