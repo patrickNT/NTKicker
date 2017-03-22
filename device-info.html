@@ -32,9 +32,7 @@ Await)</a> sample.</p>
     event.stopPropagation();
     event.preventDefault();
 
-    document.write("Before Method Call_1");
-    document.write("After Method Call");
-
+    document.write('Check if Bluetooth is enabled');
     if (isWebBluetoothEnabled()) {
       document.write('Bluetooth enabled');
       ChromeSamples.clearLog();
