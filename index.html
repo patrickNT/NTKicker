@@ -1,7 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0;URL='https://www.chromestatus.com/samples'">
-</head>
+    <body>
+        <p>Click the Button to scan for Devices</p>
+        <button onclick="scan()">Click me</button>
+        <script>
+            function scan() {
+                navigator.bluetooth.requestDevice().then(function(d){console.log("found a device", d)}, function(e){console.log("oh no", e)});
+            }
+        </script>
+
+    </body>
 </html>
