@@ -33,13 +33,12 @@ Await)</a> sample.</p>
     event.preventDefault();
 
     document.write("Before Method Call");
+    document.write("After Method Call");
 
     if (isWebBluetoothEnabled()) {
       ChromeSamples.clearLog();
       onButtonClick();
     }
-
-    document.write('Click finished');
   });
 </script>
 
