@@ -3,9 +3,12 @@
     <body>
         <p>Click the Button to scan for Devices</p>
         <button onclick="scan()">Click me</button>
+        <p id='output'>This Will be the output</p>
+
+        
         <script>
             function scan() {
-                navigator.bluetooth.requestDevice().then(function(d){console.log("found a device", d)}, function(e){console.log("oh no", e)});
+                navigator.bluetooth.requestDevice().then(function(d){document.getElementById('output').innerHTML='Found device'}, function(e){document.getElementById('output').innerHTML='oh, no...'});
             }
         </script>
 
