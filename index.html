@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <p>All Devices</p>
-        <button onclick="scan()">Click me</button>
-        <p id='output'>This Will be the output</p>
-        
-        <script>
-            function scan() {
-                document.getElementById('output').innerHTML='Starting scan';
-                navigator.bluetooth.requestDevice({acceptAllDevices: true, optionalServices: ['battery_services']}).then(document.getElementById('output').innerHTML='found Device').catch(document.getElementById('output').innerHTML='oh no...')
-            }
-        </script>
-    </body>
-</html>
+<!doctype html>
+<h1>Web Bluetooth Demos hosted here:</h1>
+<ul>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-led-display/">bluetooth-led-display</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-printer/">bluetooth-printer</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-racing-cars/">bluetooth-racing-cars</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-rename/">bluetooth-rename</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-toy-bb8/">bluetooth-toy-bb8</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/bluetooth-toy-plane/">bluetooth-toy-plane</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/heart-rate-sensor/">heart-rate-sensor</a></li>
+  <li><a href="https://webbluetoothcg.github.io/demos/playbulb-candle/">playbulb-candle</a></li>
+</ul>
+<a href="https://github.com/WebBluetoothCG/demos">Source Code, and links to other demos</a>
