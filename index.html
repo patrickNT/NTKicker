@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <p>Click the Button to scan for Devices</p>
+        <p>All Devices</p>
         <button onclick="scan()">Click me</button>
         <p id='output'>This Will be the output</p>
-
         
         <script>
             function scan() {
                 document.getElementById('output').innerHTML='Starting scan';
-                navigator.bluetooth.requestDevice().then(function(d){document.getElementById('output').innerHTML='Found device'}, function(e){document.getElementById('output').innerHTML='oh, no...'});
+                navigator.bluetooth.requestDevice({acceptAllDevices: true, optionalServices: ['battery_services']}).then(document.getElementById('output').innerHTML='found Device').catch(document.getElementById('output').innerHTML='oh no...')
             }
         </script>
-
     </body>
 </html>
