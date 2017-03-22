@@ -32,6 +32,8 @@ Await)</a> sample.</p>
     event.stopPropagation();
     event.preventDefault();
 
+    document.write("Before Method Call");
+
     if (isWebBluetoothEnabled()) {
       ChromeSamples.clearLog();
       onButtonClick();
